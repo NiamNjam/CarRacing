@@ -55,6 +55,7 @@ public class Vehicle : MonoBehaviour
     }
     public void Turn(float amount)
     {
+        amount = Mathf.Clamp(amount, -1, 1);
         transform.Rotate(0, amount * turnSpeed * Time.deltaTime, 0);
     }
 
